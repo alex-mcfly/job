@@ -18,19 +18,5 @@ def task(x1, y1, x2, y2, x3, y3, x4, y4):
         return True, area
 
 if __name__ == '__main__':
-    cors = [
-        [4, 4, 9, 7, 4, 7, 9, 9],  # false
-        [4, 4, 9, 7, 4, 7, 10, 9],  # false
-        [4, 4, 9, 7, 4, 5, 9, 9],  # true
-        [4, 4, 9, 7, 5, 5, 1, 1],  # true
-        [4, 4, 9, 7, 4, 6, 9, 9],  # true
-        [4, 4, 9, 7, 9, 1, 10, 10],  # false
-        [4, 4, 9, 7, 4, 1, 1, 8],  # false
-        [4, 4, 9, 7, 6, 4, 8, 0],  # false
-        [4, 4, 9, 7, 4, 5, 9, 6]  # true
-    ]
-
-    for cor in cors:
-        print(cor)
-        print(task(*cor))
-        print()
+    cors = [int(cor) for cor in input().split()]
+    print(task(*cors))
